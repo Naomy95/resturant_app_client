@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.1",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "chart.js": "^4.3.3",
     "ngrok": "^5.0.0-beta.2",
     "react": "^18.2.0",

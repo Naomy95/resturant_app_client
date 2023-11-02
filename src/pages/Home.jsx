@@ -5,6 +5,8 @@ import Header from '../components/Header'
 import Demo from '../components/Demo'
 import Midsection from '../components/Home/Midsection'
 import HomeMenu from '../components/Home/HomeMenu'
+import MasterChef from '../components/Home/MasterChef'
+import Contact from '../components/Home/Contact'
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
       <Header />
       <Midsection />
       <HomeMenu />
+      <MasterChef />
+      <Contact />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import image from "../assets/images/banner.png"
+import image from "../assets/images/home_cvr.png"
 import './Header.css'
 import Navbar from "./Navbar";
 
@@ -11,6 +11,11 @@ const Header = () => {
 
       <div
         className="header"
+        style={{
+          backgroundImage: `url("${image}")`,
+          backgroundSize: "cover",
+          backgroundColor: " rgba(27, 26, 26, 0.9)",
+        }}
       
       >
      
@@ -35,8 +40,8 @@ const Header = () => {
 
        
         {/* <img src={image} alt="" /> */}
-       <div className="flex">
-       <button onClick={()=>navigate('/services')} className="border-[2px] text-xs lg:text-base  text-white font-sans lg:w-44 p-2 ">
+       <div className="flex  pt-10">
+       <button onClick={()=>navigate('/services')} className="border-[2px] text-xs lg:text-base  text-white font-sans lg:w-44 p-2 mr-10 ">
           See Menu
         </button>
         <button onClick={()=>navigate('/services')} className="border-[2px] text-xs lg:text-base  text-white font-sans lg:w-44 lg:ml-4 p-2 ">

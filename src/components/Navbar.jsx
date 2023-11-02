@@ -50,64 +50,46 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-navbarcolor rounded-box w-52"
+              className="menu menu-compact dropdown-content  shadow bg-black  w-[305px] h-[700px]"
             >
-              <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
+              <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
                 <a href="/">Home</a>
               </li>
-              <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
-                <a href="/services">Services</a>
+              <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
+                <a href="/services">About</a>
               </li>
-              <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
-                <a href="/aboutclinic">Offers</a>
+              <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
+                <a href="/aboutclinic">Menus</a>
               </li>
               {token ? (
-                <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
-                  <a href="/blogs">Blogs</a>
+                <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
+                  <a href="/blogs">Cart</a>
                 </li>
               ) : (
-                <li onClick={()=>navigate('/login')} className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
+                <li onClick={()=>navigate('/login')} className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
                  
-                    <a>Blogs</a>
+                    <a>Contacts</a>
                 
                 </li>
               )}
 
-              <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
+              <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
                 <a>Contact</a>
               </li>
             </ul>
           </div>
 
           <ul className="menu menu-horizontal hidden lg:flex ">
-            <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
+            <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
               <a href="/">Home</a>
             </li>
-            <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
-              <a href="/services">Services</a>
+            <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
+              <a href="/about">About</a>
             </li>
-            <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
-              <a href="/aboutclinic">Offers</a>
+            <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
+              <a href="/menu">Menus</a>
             </li>
-            {token ? (
-              <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
-                <a href="/blogs">Blogs</a>
-              </li>
-            ) : (
-             
-              <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
-              <label htmlFor="my-modal-4" >
-                <a>Blogs</a>
-              </label>
-              <input
-                type="checkbox"
-                id="my-modal-4"
-                className="modal-toggle"
-              />
-    
-          
-            </li>
-            )}
+           
 
          
           </ul>
@@ -118,13 +100,22 @@ const Navbar = () => {
         </div>
         
         <div className="navbar-end">
+        <ul className="menu menu-horizontal hidden lg:flex ">
+            <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
+              <a href="/">Contact</a>
+            </li>
+           
+            <li className="text-white text-md hover:bg-white hover:text-black mr-4 font-sans">
+              <a href="/aboutclinic">Cart</a>
+            </li>
+            </ul>
           <div className="lg:flex hidden  lg:items-center  p-2 border rounded-md border-[1px] border-white">
            
 
             {token ? (
               <div className="flex ">
                 <a
-                  className=" text-white text-xs lg:text-lg hover:bg-hoverBackground hover:text-black font-sans lg:pl-2"
+                  className=" text-white text-xs lg:text-lg hover:bg-white hover:text-black font-sans lg:pl-2"
                   onClick={() => {
                     localStorage.clear();
                     window.location.reload(true);
@@ -137,7 +128,7 @@ const Navbar = () => {
             ) : (
               <label >
                 {" "}
-                <a className=" lg:text-white border-[1px] border-buttoncolor p-2 lg:p-0 rounded-lg text-buttoncolor  text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans ml-2 font-semibold lg:font-normal">
+                <a className=" lg:text-white  p-2 lg:p-0 rounded-lg text-white  text-md hover:bg-white hover:text-black mr-4 font-sans ml-2 font-semibold lg:font-normal">
                   Login
                 </a>
                 <input
@@ -153,7 +144,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="flex  lg:hidden  border rounded-md border-[1px] border-white">
+          <div className="flex  lg:hidden ">
 
             {token ? (
               <div>
@@ -163,7 +154,7 @@ const Navbar = () => {
             ) : (
               <label onClick={()=>{navigate('/login')}}>
                 {" "}
-                <a className=" lg:text-white border-[1px] border-buttoncolor p-2 lg:p-0 rounded-lg text-buttoncolor  text-md hover:bg-hoverBackground hover:text-black  font-sans ml-2 font-semibold lg:font-normal">
+                <a className=" lg:text-white   p-2 lg:p-0 rounded-lg text-white  text-md hover:bg-white hover:text-black  font-sans ml-2 font-semibold lg:font-normal">
                   Login
                 </a>
             
